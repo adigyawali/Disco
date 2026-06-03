@@ -1,0 +1,44 @@
+appId: com.adigyawali.disco
+productName: Disco
+copyright: Copyright © 2026 Aditya Gyawali
+
+directories:
+  buildResources: build
+  output: release
+
+files:
+  - '!**/.vscode/*'
+  - '!src/*'
+  - '!electron.vite.config.{js,ts,mjs,cjs}'
+  - '!{.eslintrc,.prettierrc,tsconfig.json,tsconfig.node.json,tsconfig.web.json}'
+  - '!{.env,.env.*,.npmrc}'
+
+# better-sqlite3 is a native dependency — bundle the compiled binary.
+asarUnpack:
+  - '**/*.node'
+  - 'node_modules/better-sqlite3/**'
+
+mac:
+  category: public.app-category.education
+  target:
+    - target: dmg
+      arch:
+        - arm64
+        - x64
+  minimumSystemVersion: '13.0'
+  darkModeSupport: true
+  # Personal app, unsigned. Disable hardened runtime/notarization for local use.
+  hardenedRuntime: false
+  gatekeeperAssess: false
+
+dmg:
+  title: Disco
+  contents:
+    - x: 130
+      y: 220
+    - x: 410
+      y: 220
+      type: link
+      path: /Applications
+
+npmRebuild: true

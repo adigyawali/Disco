@@ -1,0 +1,84 @@
+/* Dark/glass theme overrides for react-big-calendar. */
+.rbc-calendar {
+  color: rgb(var(--content));
+  font-family: inherit;
+}
+.rbc-toolbar {
+  margin-bottom: 16px;
+  gap: 8px;
+}
+.rbc-toolbar button {
+  color: rgb(var(--content-muted));
+  background: rgb(var(--surface-2) / 0.6);
+  border: 1px solid rgb(var(--border));
+  border-radius: 10px;
+  padding: 6px 14px;
+  font-weight: 600;
+  font-size: 13px;
+  transition: all 0.2s;
+}
+.rbc-toolbar button:hover {
+  color: rgb(var(--content));
+  background: rgb(var(--surface-2));
+}
+.rbc-toolbar button.rbc-active,
+.rbc-toolbar button.rbc-active:hover {
+  color: #fff;
+  background: linear-gradient(135deg, rgb(var(--accent)), rgb(var(--violet)));
+  border-color: transparent;
+}
+.rbc-toolbar-label {
+  font-size: 18px;
+  font-weight: 700;
+}
+.rbc-month-view,
+.rbc-time-view {
+  border: 1px solid rgb(var(--border));
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgb(var(--surface) / 0.4);
+}
+.rbc-header {
+  padding: 10px 4px;
+  font-weight: 600;
+  font-size: 12px;
+  color: rgb(var(--content-subtle));
+  border-color: rgb(var(--border)) !important;
+}
+.rbc-month-row,
+.rbc-day-bg,
+.rbc-time-content,
+.rbc-time-header-content,
+.rbc-timeslot-group {
+  border-color: rgb(var(--border) / 0.7) !important;
+}
+.rbc-off-range-bg {
+  background: rgb(var(--bg) / 0.5);
+}
+.rbc-today {
+  background: rgb(var(--accent) / 0.1);
+}
+.rbc-date-cell {
+  padding: 6px 8px;
+  font-size: 12px;
+  color: rgb(var(--content-muted));
+}
+.rbc-event {
+  border-radius: 8px;
+  border: none;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: 600;
+}
+.rbc-event.rbc-selected {
+  box-shadow: 0 0 0 2px rgb(var(--content) / 0.4);
+}
+.rbc-show-more {
+  color: rgb(var(--accent));
+  background: transparent;
+  font-size: 11px;
+}
+.rbc-addons-dnd .rbc-addons-dnd-resize-ns-icon,
+.rbc-addons-dnd .rbc-addons-dnd-resize-ew-icon {
+  display: none;
+}
